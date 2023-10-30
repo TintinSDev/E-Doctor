@@ -1,0 +1,108 @@
+
+         {
+         "doctors":[
+            {
+               "image_url":"https://images.pexels.com/photos/4021779/pexels-photo-4021779.jpeg?auto=compress&cs=tinysrgb&w=600",
+               "id":1,
+               "name":"Dr. Atish Ranjan",
+               "speciality":"Emergency Medicine",
+               "gender":"male"
+              
+            },
+            {
+               "image_url":"https://images.pexels.com/photos/4021779/pexels-photo-4021779.jpeg?auto=compress&cs=tinysrgb&w=600",
+               "id":2,
+               "name":"Dr. Vikrant Mittal",
+               "speciality":"Cardiology",
+               "gender":"male"
+            
+            },
+            {
+               "image_url":"https://images.pexels.com/photos/4173251/pexels-photo-4173251.jpeg?auto=compress&cs=tinysrgb&w=600",
+               "id":3,
+               "name":"Dr. Anil Gupta",
+               "speciality":"ENT",
+               "gender":"female"
+               
+            },
+            {
+               "image_url":"https://images.pexels.com/photos/4021779/pexels-photo-4021779.jpeg?auto=compress&cs=tinysrgb&w=600",
+               "id":4,
+               "name":"Dr. Navin Shukla",
+               "speciality":"Oral &amp; Maxillofacial Surgery",
+               "gender":"male"
+            },
+            {
+                "image_url":"https://images.pexels.com/photos/4021779/pexels-photo-4021779.jpeg?auto=compress&cs=tinysrgb&w=600",
+                "id":5,
+                "name":"Dr. Rogers Itera",
+                "speciality":"Orthopedics",
+                "gender":"male"
+             },
+             {
+                "image_url":"https://images.pexels.com/photos/4021779/pexels-photo-4021779.jpeg?auto=compress&cs=tinysrgb&w=600",
+                "id":6,
+                "name":"Dr. Navin Shukla",
+                "speciality":"Oncology",
+                "gender":"male"
+             },
+             {
+                "image_url":"https://images.pexels.com/photos/4021779/pexels-photo-4021779.jpeg?auto=compress&cs=tinysrgb&w=600",
+                "id":7,
+                "name":"Dr. Carrey Michaels",
+                "speciality":"Urology",
+                "gender":"male"
+             },
+             {
+                "image_url":"https://images.pexels.com/photos/4173251/pexels-photo-4173251.jpeg?auto=compress&cs=tinysrgb&w=600",
+                "id":8,
+                "name":"Dr. Maria Reti",
+                "speciality":"Neurosurgery",
+                "gender":"female"
+             },
+             {
+                "image_url":"https://images.pexels.com/photos/4173251/pexels-photo-4173251.jpeg?auto=compress&cs=tinysrgb&w=600",
+                "id":9,
+                "name":"Dr. Queen Yuri",
+                "speciality":"Opthalmology",
+                "gender":"female"
+             },
+             {
+                "image_url":"https://images.pexels.com/photos/4021779/pexels-photo-4021779.jpeg?auto=compress&cs=tinysrgb&w=600",
+                "id":10,
+                "name":"Dr. Vinod Shukh",
+                "speciality":"Obstetrics and Gynaecology",
+                "gender":"male"
+             },
+             {
+                "image_url":"https://images.pexels.com/photos/4173251/pexels-photo-4173251.jpeg?auto=compress&cs=tinysrgb&w=600",
+                "id":11,
+                "name":"Dr. Naom Olora",
+                "speciality":"Dentistry",
+                "gender":"female"
+             },
+             {
+                "image_url":"https://images.pexels.com/photos/4021779/pexels-photo-4021779.jpeg?auto=compress&cs=tinysrgb&w=600",
+                "id":12,
+                "name":"Dr. Naveed Merali",
+                "speciality":"Psychiatry",
+                "gender":"male"
+             },
+             {
+                "image_url":"https://images.pexels.com/photos/4173251/pexels-photo-4173251.jpeg?auto=compress&cs=tinysrgb&w=600",
+                "id":13,
+                "name":"Dr. Ann Kibia",
+                "speciality":"Dermatology",
+                "gender":"female"
+             },
+             {
+                "image_url":"https://images.pexels.com/photos/4173251/pexels-photo-4173251.jpeg?auto=compress&cs=tinysrgb&w=600",
+                "id":14,
+                "name":"Dr. Linda Peters",
+                "speciality":"Paediatrics",
+                "gender":"female"
+             }
+          ]
+        
+        }
+        
