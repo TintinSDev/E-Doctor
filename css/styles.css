@@ -25,4 +25,10 @@ header {
     z-index: 99;
 }
 
+.logo {
+    font-size: 2em;
+    color: #023047;
+    user-select: none;
+}
+
 
