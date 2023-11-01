@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             docName.innerText = doc.name;
                             docImage.src = doc.image_url
                             speciality.innerText = doc.speciality
-                            appointments.innerHTML = doc.appointments
+                            appointments.textContent= doc.appointments
                             genders.innerText = doc.gender
                         }
                     }
