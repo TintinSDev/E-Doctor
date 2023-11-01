@@ -153,7 +153,7 @@ ul {
   
   ul {
     margin-left: 5px;
-    align-items: right;
+    align-items: left;
   }
   
    ul li {
@@ -345,3 +345,17 @@ ul {
 .login-register p a:hover {
     text-decoration: underline;
 }  
+
+/* footer {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    background-color:#1b283a;
+}
+.footer-text p{
+    font-size: 1rem;
+    background: #1b283a;
+    color: aqua;
+}
+ */
+
