@@ -21,10 +21,10 @@ document.addEventListener('DOMContentLoaded', () => {
     fetch(`${DOC_URL}/doctors`)
         .then(response => response.json())
         .then(doctors => {
-            docName.innerText = doctors.name;
-            docImage.src = doctors.image_url
-            speciality.innerText = doctors.speciality
-            genders.innerText = doctors.gender
+            docName.innerText = doctors[0].name;
+            docImage.src = doctors[0].image_url
+            speciality.innerText = doctors[0].speciality
+            genders.innerText = doctors[0].gender
         })
 
     const details = document.querySelector('.details');
