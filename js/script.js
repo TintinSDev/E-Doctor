@@ -6,10 +6,10 @@ async function fetchDocs() {
     const doctors = await docResponse.json()
     return fetch(`${DOC_URL}/doctors`)
 }
-function newAppointment() {
-    appointments.textContent++
+function add() {
+    appointments.textContent = appointments.textContent + 1
     document.querySelector('#appointments').innerHTML = appointments.textContent;
-    appointments.onclick = newAppointment;
+    appointments.onclick = add;
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 })
         })
      const fetchList = document.querySelector('.btn')
-     fetchList.addEventListener('submit', (e) => {
+     fetchList.addEventListener('click', (e) => {
          e.preventDefault()
           console.log(e.target)
          fetch(`${DOC_URL}/doctors`)
@@ -64,8 +64,10 @@ document.addEventListener('DOMContentLoaded', () => {
                  .then(doctors => {
                      console.log(doctors)
                  })
+                 add();
      })
-    newAppointment();
+    
+  
         
      
     
