@@ -7,19 +7,17 @@ async function fetchDocs() {
     return fetch(`${DOC_URL}/doctors`)
 }
 function sum() {
-    appointments.textContent = appointments.textContent + 1
-    document.querySelector('#appointments') = appointments.textContent;
+    appointments.textContent = Math.floor(appointments.textContent) + 1
+    document.querySelector('#appointments').value = appointments.textContent;
     appointments.onclick = sum;
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    const docName = document.getElementById('doc-name')
-    const docImage = document.getElementById('doc-image')
-    const speciality = document.getElementById('specs')
-    const genders = document.getElementById('gender')
-    const appointments = document.getElementById('appointments')
-    const appointment = document.getElementById('app-btn')
-    
+    const docName = document.querySelector('#doc-name')
+    const docImage = document.querySelector('#doc-image')
+    const speciality = document.querySelector('#specs')
+    const genders = document.querySelector('#gender')
+    const appointments = document.querySelector('#appointments')
     const specialistList = document.querySelector('#spec-list')
 
     // display doctors details for booking appointments
@@ -31,7 +29,6 @@ document.addEventListener('DOMContentLoaded', () => {
             speciality.innerText = doctors[0].speciality
             genders.innerText = doctors[0].gender
             appointments.textContent = doctors[0].appointments
-
             specialistList.innerHTML = ''
             for (let doc of doctors) {
                 specialistList.innerHTML += `<li>${doc.speciality}</li>`
