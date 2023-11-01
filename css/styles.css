@@ -1,9 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Engagement&family=Poppins:ital,wght@0,600;1,100;1,300;1,400;1,500&display=swap');
+
 body {
-    /* background-image: url('https://images.pexels.com/photos/3882464/pexels-photo-3882464.jpeg?auto=compress&cs=tinysrgb&w=600'); */
     background-color: #023047;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Engagement&family=Poppins:ital,wght@0,600;1,100;1,300;1,400;1,500&display=swap');
+
 
 * {
     margin: 0;
@@ -18,7 +27,6 @@ header {
     left: 0;
     width: 100%;
     padding: 20px 100px;
-    background: red;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -38,6 +46,7 @@ header {
     text-decoration: none;
     font-weight: 500;
     margin-left: 40px;
+    color: black;
 }
 
 .navigation a::after{
@@ -56,6 +65,7 @@ transition: transform .5s;
 
 .navigation a:hover:after{
     transform: scaleX(1);
+    transform-origin: left;
 }
 
 .navigation .btnLogin-popup {
