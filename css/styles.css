@@ -101,7 +101,11 @@ transition: transform .5s;
     align-items: center;
     overflow: hidden;
     transform: scale(0);
-    transition: height .2s ease;
+    transition: transform .5s ease, height .2s ease;
+}
+
+.wrapper.active-popup{
+    transform: scale(1);
 }
 
 .wrapper.active {
