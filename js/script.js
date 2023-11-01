@@ -90,14 +90,6 @@ document.addEventListener('DOMContentLoaded', () => {
     iconClose.addEventListener('click', () => {
         wrapper.classList.remove('active-popup');
     });
-    addFeedback.addEventListener('click', () => { 
-        wrapper.classList.add('passive-popup');
-    });
-    wrapperForm.addEventListener('click', () => { 
-        wrapper-form.classList.add('passive');
-    })
-
-
     fetchDocs();
 
 })

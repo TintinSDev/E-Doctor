@@ -350,10 +350,9 @@ ul {
     text-decoration: underline;
 }  
 
-
-
+ /* feedback form */
 .wrapper-form{
-    min-height: 2px;
+    
     margin-top: 50%;
     display: block;
     align-items: center;
@@ -380,12 +379,22 @@ ul {
     color: #162938;
     font-size: 1em;
     
+    
 }
 .feedback{
     margin-left: 100px;
     align-items: center;
     align-content: center;
     justify-content: center;
+    pointer-events: none;
+}
+
+.feed-section {
+position: absolute;
+right: 0;
+margin-right: 34%;
+margin-top: 30%;
+
 }
  .wrapper .icon-close{
     position: absolute;
