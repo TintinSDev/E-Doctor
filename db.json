@@ -6,7 +6,8 @@
                "id":1,
                "name":"Dr. Atish Ranjan",
                "speciality":"Emergency Medicine",
-               "gender":"Male"
+               "gender":"Male",
+               "appointmets": 0
               
             },
             {

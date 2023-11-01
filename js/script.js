@@ -6,16 +6,23 @@ async function fetchDocs() {
     const doctors = await docResponse.json()
     return fetch(`${DOC_URL}/doctors`)
 }
+function newAppointment() {
+    newAppointment.textContent++
+    document.querySelector('#appointments').innerHTML = newAppointment.textContent;
+    newAppointment.onclick = newAppointment
+}
 
 document.addEventListener('DOMContentLoaded', () => {
     const docName = document.getElementById('doc-name')
     const docImage = document.getElementById('doc-image')
     const speciality = document.getElementById('specs')
     const genders = document.getElementById('gender')
+    const appointments = document.getElementById('appointments')
     const appointment = document.getElementById('app-btn')
+    
     const specialistList = document.querySelector('#spec-list')
 
-    // display doc details
+    // display doctors details for booking appointments
     fetch(`${DOC_URL}/doctors`)
         .then(response => response.json())
         .then(doctors => {
@@ -23,14 +30,15 @@ document.addEventListener('DOMContentLoaded', () => {
             docImage.src = doctors[0].image_url
             speciality.innerText = doctors[0].speciality
             genders.innerText = doctors[0].gender
+            appointments.textContent = doctors[0].appointments
+
             specialistList.innerHTML = ''
             for (let doc of doctors) {
                 specialistList.innerHTML += `<li>${doc.speciality}</li>`
             }
         })
      
-    //specialistList selection
-    
+    //specialistList click event    
         specialistList.addEventListener('click', (e) => {
             e.preventDefault()
             fetch(`${DOC_URL}/doctors`)
@@ -46,9 +54,27 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 })
         })
+     const fetchList = document.querySelector('.btn')
+     fetchList.addEventListener('submit', (e) => {
+         e.preventDefault()
+          console.log(e.target)
+         fetch(`${DOC_URL}/doctors`, {
+             method: 'POST',
+             headers: {
+                 'Content-Type': 'application/json'
+             },
+             body: JSON.stringify({
+                 appointments: e.target[0].value
+         })
+                 .then(response => response.json())
+                 .then(doctors => {
+                     console.log(doctors)
+                 })
+         })
+         newAppointment
+     })
     
     
-  
 
     //wrapper event handlers
     const wrapper = document.querySelector('.wrapper');
@@ -73,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
     iconClose.addEventListener('click', () => {
         wrapper.classList.remove('active-popup');
     });
-
+    fetchDocs();
 
 })
 
