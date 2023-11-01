@@ -132,9 +132,18 @@ text-align: center;
     color: #162938;
     background-color: #cde7f4;
 }
+.container{
+    text-align: left;
+    width: 30%;
+    height: 100%;
+    color: #03045e;
+    transition: .5s; 
+    transition: transform .5s ease, height .2s ease;
+}
 ul {
     padding: 0;
     justify-content: flex-end;
+    
 
   }
   
@@ -154,8 +163,17 @@ ul {
   }
   
    ul li:hover {
-    background-color: #cde7f4;
-    color: #fff;
+    background-color: #bde0fe;
+    color: #0d0c0c;
+    opacity: 1;
+    transform: scale(0.9);
+    transition: .5s ease;
+    border-radius: 60px;
+    max-width: 60%;
+    
+  }
+  h3{
+    color: #162938;
   }
 .wrapper{
     position: relative;

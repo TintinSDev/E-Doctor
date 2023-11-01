@@ -36,8 +36,8 @@ document.addEventListener('DOMContentLoaded', () => {
         })
      
     //specialistList selection
-    for (let i = 0; i < specialistList.length; i++) {
-        specialistList[i].addEventListener('click', (e) => {
+    
+        specialistList.addEventListener('click', (e) => {
             e.preventDefault()
             fetch(`${DOC_URL}/doctors`)
                 .then(response => response.json())
@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 })
         })
-    }
+    
     
   
 
