@@ -16,8 +16,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const speciality = document.getElementById('specs')
     const genders = document.getElementById('gender')
     const appointment = document.getElementById('app-btn')
+    const specialistList = document.querySelector('#spec-list')
 
 
+    
+
+    // display doc details
     fetch(`${DOC_URL}/doctors`)
         .then(response => response.json())
         .then(doctors => {
@@ -25,24 +29,32 @@ document.addEventListener('DOMContentLoaded', () => {
             docImage.src = doctors[0].image_url
             speciality.innerText = doctors[0].speciality
             genders.innerText = doctors[0].gender
+            specialistList.innerHTML = ''
+            for (let doc of doctors) {
+                specialistList.innerHTML += `<li>${doc.speciality}</li>`
+            }
         })
-
-    const details = document.querySelector('.details');
-    details.addEventListener('click', (e) => {
-        e.preventDefault()
-        fetch(`${DOC_URL}/doctors`)
-            .then(response => response.json())
-            .then(doctors => {
-                for (let doc of doctors) {
-                    if (doc.name === e.target.textContent) {
-                        docName.innerText = doc.name;
-                        docImage.src = doc.image_url
-                        speciality.innerText = doc.speciality
-                        genders.innerText = doc.gender
+     
+    //specialistList selection
+    for (let i = 0; i < specialistList.length; i++) {
+        specialistList[i].addEventListener('click', (e) => {
+            e.preventDefault()
+            fetch(`${DOC_URL}/doctors`)
+                .then(response => response.json())
+                .then(doctors => {
+                    for (let doc of doctors) {
+                        if (doc.speciality === e.target.innerText) {
+                            docName.innerText = doc.name;
+                            docImage.src = doc.image_url
+                            speciality.innerText = doc.speciality
+                            genders.innerText = doc.gender
+                        }
                     }
-                }
-            })
-    })
+                })
+        })
+    }
+    
+  
 
     //wrapper event handlers
     const wrapper = document.querySelector('.wrapper');

@@ -123,8 +123,7 @@ text-align: center;
 }
 #specs, #gender {
     margin: 15px 0 0 15px;
-    
-    
+      
 }
 #app-btn {
     margin: 20px 0 0 15px;
@@ -133,6 +132,31 @@ text-align: center;
     color: #162938;
     background-color: #cde7f4;
 }
+ul {
+    padding: 0;
+    justify-content: flex-end;
+
+  }
+  
+  li {
+    list-style: none;
+  }
+  
+  ul {
+    margin-left: 5px;
+    align-items: right;
+  }
+  
+   ul li {
+    padding: 5px;
+    cursor: pointer;
+
+  }
+  
+   ul li:hover {
+    background-color: #cde7f4;
+    color: #fff;
+  }
 .wrapper{
     position: relative;
     width: 400px;
