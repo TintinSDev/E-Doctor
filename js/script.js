@@ -6,9 +6,6 @@ async function fetchDocs() {
     const doctors = await docResponse.json()
     return fetch(`${DOC_URL}/doctors`)
 }
-function services() {
-
-}
 
 document.addEventListener('DOMContentLoaded', () => {
     const docName = document.getElementById('doc-name')
@@ -17,9 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const genders = document.getElementById('gender')
     const appointment = document.getElementById('app-btn')
     const specialistList = document.querySelector('#spec-list')
-
-
-    
 
     // display doc details
     fetch(`${DOC_URL}/doctors`)

@@ -65,24 +65,23 @@ transition: transform .5s;
     transform-origin: left;
 }
 
-.navigation .btnLogin-popup {
-    width: 130px;
-    height: 50px;
+.btnLogin-popup {
+    width: 50%;
     background: transparent;
-    border: 2px solid #fff;
+    border: 2px solid #023047;
     outline: none;
     border-radius: 6px;
     cursor: pointer;
-    font-size: 1.1em;
-    color: aliceblue;
-    font-weight: 500;
+    font-size: 1em;
+    color: #023047;
+    font-weight: 200;
     margin-left: 40px;
     transition: .5s; 
 }
-/* .navigation .btnLogin-popup:hover{
-    background: slategray;
-    color: #023047;
-} */
+ .btnLogin-popup:hover{
+    background: #023047;
+    color: aliceblue;
+}
 .wrapper-doc{
     position: relative;
     width: 400px;
