@@ -99,7 +99,8 @@ transition: transform .5s;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* overflow: hidden; */
+    overflow: hidden;
+    transform: scale(0);
     transition: height .2s ease;
 }
 
@@ -114,6 +115,7 @@ transition: transform .5s;
 
 .wrapper .form-box.login {
     transition: transform .18s ease;
+    transform: translateX(0);
 }
 
 .wrapper.active .form-box.login {
@@ -123,7 +125,12 @@ transition: transform .5s;
 
 .wrapper .form-box.register {
     position: absolute;
+    transition: none;
     transform: translateX(400px);
+}
+.wrapper.active .form-box.register{
+    transition: transform .18s ease;
+    transform: translateX(0);
 }
 
 .wrapper .icon-close{
