@@ -6,10 +6,10 @@ async function fetchDocs() {
     const doctors = await docResponse.json()
     return fetch(`${DOC_URL}/doctors`)
 }
-function add() {
+function sum() {
     appointments.textContent = appointments.textContent + 1
-    document.querySelector('#appointments').innerHTML = appointments.textContent;
-    appointments.onclick = add;
+    document.querySelector('#appointments') = appointments.textContent;
+    appointments.onclick = sum;
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -49,6 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             docName.innerText = doc.name;
                             docImage.src = doc.image_url
                             speciality.innerText = doc.speciality
+                            appointments.innerHTML = doc.appointments
                             genders.innerText = doc.gender
                         }
                     }
@@ -57,21 +58,14 @@ document.addEventListener('DOMContentLoaded', () => {
      const fetchList = document.querySelector('.btn')
      fetchList.addEventListener('click', (e) => {
          e.preventDefault()
-          console.log(e.target)
+        //   console.log(e.target)
          fetch(`${DOC_URL}/doctors`)
-             
                  .then(response => response.json())
                  .then(doctors => {
                      console.log(doctors)
                  })
-                 add();
+                 sum();
      })
-    
-  
-        
-     
-    
-    
 
     //wrapper event handlers
     const wrapper = document.querySelector('.wrapper');
