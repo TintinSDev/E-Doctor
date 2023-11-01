@@ -1,17 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Engagement&family=Poppins:ital,wght@0,600;1,100;1,300;1,400;1,500&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Engagement&family=Poppins:ital,wght@0,600;1,100;1,300;1,400;1,500&display=swap');
 
 body {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url('background.jpg');
+    background: url('background.jpg') no-repeat;
     background-size: cover;
     background-position: center;
 
 }
-
-
 
 * {
     margin: 0;
@@ -99,7 +97,7 @@ transition: transform .5s;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    transform: scale(0);
+    /* transform: scale(0); */
     transition: transform .5s ease, height .2s ease;
 }
 
@@ -109,12 +107,12 @@ transition: transform .5s;
 
 .wrapper.active {
     height: 520px;
-}
+} 
 
-.wrapper .form-box {
+/* .wrapper .form-box {
     width: 20%;
     padding: 40px;
-}
+} */
 
 .wrapper .form-box.login {
     transition: transform .18s ease;
@@ -136,7 +134,7 @@ transition: transform .5s;
     transform: translateX(0);
 }
 
-.wrapper .icon-close{
+ .wrapper .icon-close{
     position: absolute;
     top: 0;
     right: 0;
@@ -151,7 +149,7 @@ transition: transform .5s;
     cursor: pointer;
     z-index: 1;
 }
-
+ 
 .form-box h2 {
     font-size: 2em;
     color: #162938;
@@ -255,4 +253,4 @@ transition: transform .5s;
 
 .login-register p a:hover {
     text-decoration: underline;
-}
+}  
