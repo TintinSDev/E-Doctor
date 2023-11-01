@@ -7,9 +7,9 @@ async function fetchDocs() {
     return fetch(`${DOC_URL}/doctors`)
 }
 function newAppointment() {
-    newAppointment.textContent++
-    document.querySelector('#appointments').innerHTML = newAppointment.textContent;
-    newAppointment.onclick = newAppointment
+    appointments.textContent++
+    document.querySelector('#appointments').innerHTML = appointments.textContent;
+    appointments.onclick = newAppointment;
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -58,21 +58,16 @@ document.addEventListener('DOMContentLoaded', () => {
      fetchList.addEventListener('submit', (e) => {
          e.preventDefault()
           console.log(e.target)
-         fetch(`${DOC_URL}/doctors`, {
-             method: 'POST',
-             headers: {
-                 'Content-Type': 'application/json'
-             },
-             body: JSON.stringify({
-                 appointments: e.target[0].value
-         })
+         fetch(`${DOC_URL}/doctors`)
+             
                  .then(response => response.json())
                  .then(doctors => {
                      console.log(doctors)
                  })
-         })
-         newAppointment
      })
+    newAppointment();
+        
+     
     
     
 
