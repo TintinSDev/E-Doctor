@@ -6,3 +6,11 @@ async function fetchDocs() {
     const doctors = await docResponse.json()
     return fetch(`${DOC_URL}/doctors`)
 }
+
+const wrapper = document.querySelector('.wrapper');
+const loginLink = document.querySelector('.login-link');
+const registerLink = document.querySelector('.register-link');
+
+registerLink.addEventListener('click', () => {
+    
+})

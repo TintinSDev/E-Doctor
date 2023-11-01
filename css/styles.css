@@ -107,8 +107,13 @@ transition: transform .5s;
     padding: 40px;
 }
 
-.wrapper .form-box.login {
+/* .wrapper .form-box.login {
     display: none;
+} */
+
+.wrapper .form-box.register {
+    position: absolute;
+    transform: translateX(400px);
 }
 
 .wrapper .icon-close{
