@@ -99,11 +99,32 @@ transition: transform .5s;
     display: flex;
     justify-content: center;
     align-items: center;
+    /* overflow: hidden; */
 }
 
 .wrapper .form-box {
     width: 20%;
     padding: 40px;
+}
+
+.wrapper .form-box.login {
+    display: none;
+}
+
+.wrapper .icon-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background: #162938;
+    font-size: 2em;
+    color: aliceblue;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
 }
 
 .form-box h2 {
@@ -193,3 +214,20 @@ transition: transform .5s;
     font-weight: 500;
 }
 
+.login-register {
+    font-size: .9em;
+    color: #162938;
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
+}
+
+.login-register p a{
+    color: #162938;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-register p a:hover {
+    text-decoration: underline;
+}
