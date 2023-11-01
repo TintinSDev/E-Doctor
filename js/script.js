@@ -11,10 +11,17 @@ function services() {
 }
 
 document.addEventListener('DOMContentLoaded', () => { 
+
+
+    
     const loginBtn = document.querySelector('.btn')
-    loginBtn.addEventListener('click', handleSubmit => {
+    loginBtn.addEventListener('submit', handleSubmit => {
         handleSubmit.preventDefault()
-        fetch
+        fetch(`${DOC_URL}/doctors`)
+            .then(response => response.json())
+            .then(doctors => { 
+
+            })
     })
 
    
