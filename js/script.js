@@ -12,7 +12,13 @@ function sum() {
     appointments.onclick = sum;
 }
 
+function handleSubmit() { 
+    let feedback = document.querySelector('.feed-section');
+    console.log(feedback);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+
     const docName = document.querySelector('#doc-name')
     const docImage = document.querySelector('#doc-image')
     const speciality = document.querySelector('#specs')
@@ -63,6 +69,12 @@ document.addEventListener('DOMContentLoaded', () => {
                  })
                  sum();
      })
+    const feedback = document.querySelector('.feedback-btn')
+    feedback.addEventListener('submit', submit => {
+        submit.preventDefault();
+        handleSubmit();
+    });
+
 
     //wrapper event handlers
     const wrapper = document.querySelector('.wrapper');
