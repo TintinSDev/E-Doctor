@@ -16,6 +16,7 @@
             <a href="#">Home</a>
             <a href="#">Services</a>
             <a href="#">Contact</a>
+            <a href="#">Doctors</a>
             <button class="btnLogin-popup">Login</button>
 
 
@@ -50,7 +51,7 @@
                         Remember Me</label>
                     <a href="#">Forgot Password</a>
                 </div>
-                <button type="submit" class="btn" id="Services">Login</button>
+                <button type="submit" class="btn" id="Services" >Login</button>
                 <div class="login-register">
                     <p>Don't have an account? <a href="#" class="register-link">Register</a>
                     </p>
@@ -60,7 +61,7 @@
 
          <!-- Registration Form -->
         <div class="form-box register"> 
-            <form action="#">
+            <form action="#" id="registeration">
                 <h2>Registration</h2>
                 <div class="input-box">
                     <span class="icon">
@@ -100,25 +101,30 @@
     </div>
 
     <section id="Services">
-        <label>Specialist</label>
-        <select name="" id="">
-            <option value="Opthalmologist">Opthalmologist</option>
+
+        <label>Select Specialist</label>
+        <select name="Doctor" id="Services">
+            <option value="Doctor">Opthalmologist</option>
             <option value="Doctor">Cardiologist</option>
             <option value="Doctor">Emergency Medicine</option>
-            <option value="Doctor">Opthalmologist</option>
-            <option value="Doctor">Opthalmologist</option>
-            <option value="Doctor">Opthalmologist</option>
-            <option value="Doctor">Opthalmologist</option>
-            <option value="Doctor">Opthalmologist</option>
-            <option value="Doctor">Opthalmologist</option>
-            <option value="Doctor">Opthalmologist</option>
-            <option value="Doctor">Opthalmologist</option>
-            <option value="Doctor">Opthalmologist</option>
-            <option value="Doctor">Opthalmologist</option>
-            <option value="Doctor">Opthalmologist</option>
+            <option value="Doctor">ENT</option>
+            <option value="Doctor">Oral &amp; Maxillofacial Surgery</option>
+            <option value="Doctor">Orthopedics</option>
+            <option value="Doctor">Oncology</option>
+            <option value="Doctor">Urology</option>
+            <option value="Doctor">Neurosurgery</option>
+            <option value="Doctor">Obstetrics and Gynaecology</option>
+            <option value="Doctor">Dentistry</option>
+            <option value="Doctor">Psychiatry</option>
+            <option value="Doctor">Dermatology</option>
+            <option value="Doctor">Paediatrics</option>
         </select>
+        <div class="doctors-details">
+              <h2 id="doctor-name">Doctor:</h2>
 
+            </div>
     </section>
+
 
     <script src="./js/script.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>

@@ -6,7 +6,41 @@ async function fetchDocs() {
     const doctors = await docResponse.json()
     return fetch(`${DOC_URL}/doctors`)
 }
-//wrapper event handlers
+function services() { 
+    
+}
+
+document.addEventListener('DOMContentLoaded', () => { 
+    const loginBtn = document.querySelector('.btn')
+    loginBtn.addEventListener('click', handleSubmit => {
+        handleSubmit.preventDefault()
+        fetch
+    })
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+    //wrapper event handlers
 const wrapper = document.querySelector('.wrapper');
 const loginLink = document.querySelector('.login-link');
 const registerLink = document.querySelector('.register-link');
@@ -29,4 +63,29 @@ wrapper.classList.add('active-popup');
 iconClose.addEventListener('click', () => { 
     wrapper.classList.remove('active-popup');
 });
+
+
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
