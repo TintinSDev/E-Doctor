@@ -70,6 +70,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const registerLink = document.querySelector('.register-link');
     const btnPopup = document.querySelector('.btnLogin-popup');
     const iconClose = document.querySelector('.icon-close');
+    const wrapperForm = document.querySelector('.wrapper-form');
+    const addFeedback = document.querySelector('.add-feedback');
+
 
 
     registerLink.addEventListener('click', () => {
@@ -87,6 +90,14 @@ document.addEventListener('DOMContentLoaded', () => {
     iconClose.addEventListener('click', () => {
         wrapper.classList.remove('active-popup');
     });
+    addFeedback.addEventListener('click', () => { 
+        wrapper.classList.add('passive-popup');
+    });
+    wrapperForm.addEventListener('click', () => { 
+        wrapper-form.classList.add('passive');
+    })
+
+
     fetchDocs();
 
 })
