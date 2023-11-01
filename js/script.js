@@ -44,29 +44,6 @@ document.addEventListener('DOMContentLoaded', () => {
             })
     })
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     //wrapper event handlers
     const wrapper = document.querySelector('.wrapper');
     const loginLink = document.querySelector('.login-link');
@@ -83,9 +60,9 @@ document.addEventListener('DOMContentLoaded', () => {
         wrapper.classList.remove('active');
     });
 
-    // btnPopup.addEventListener('click', () => {
-    // wrapper.classList.add('active-popup');
-    // });
+    btnPopup.addEventListener('click', () => {
+    wrapper.classList.add('active-popup');
+    });
 
     iconClose.addEventListener('click', () => {
         wrapper.classList.remove('active-popup');

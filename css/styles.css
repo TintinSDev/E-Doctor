@@ -79,10 +79,10 @@ transition: transform .5s;
     margin-left: 40px;
     transition: .5s; 
 }
-.navigation .btnLogin-popup:hover{
+/* .navigation .btnLogin-popup:hover{
     background: slategray;
     color: #023047;
-}
+} */
 .wrapper-doc{
     position: relative;
     width: 400px;
@@ -99,7 +99,7 @@ transition: transform .5s;
     
     overflow: hidden;
     /* transform: scale(0); */
-    /* transition: transform .5s ease, height .2s ease; */
+    transition: transform .5s ease, height .2s ease;
 }
 .doc-details {
     display: block;
@@ -129,7 +129,10 @@ text-align: center;
 #app-btn {
     margin: 20px 0 0 15px;
 }
-
+.select-spec {
+    color: #162938;
+    background-color: #cde7f4;
+}
 .wrapper{
     position: relative;
     width: 400px;
