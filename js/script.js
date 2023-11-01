@@ -6,70 +6,90 @@ async function fetchDocs() {
     const doctors = await docResponse.json()
     return fetch(`${DOC_URL}/doctors`)
 }
-function services() { 
-    
+function services() {
+
 }
 
-document.addEventListener('DOMContentLoaded', () => { 
+document.addEventListener('DOMContentLoaded', () => {
+    const docName = document.getElementById('doc-name')
+    const docImage = document.getElementById('doc-image')
+    const speciality = document.getElementById('specs')
+    const genders = document.getElementById('gender')
+    const appointment = document.getElementById('app-btn')
 
 
-    
-    const loginBtn = document.querySelector('.btn')
-    loginBtn.addEventListener('submit', handleSubmit => {
-        handleSubmit.preventDefault()
+    fetch(`${DOC_URL}/doctors`)
+        .then(response => response.json())
+        .then(doctors => {
+            docName.innerText = doctors.name;
+            docImage.src = doctors.image_url
+            speciality.innerText = doctors.speciality
+            genders.innerText = doctors.gender
+        })
+
+    const details = document.querySelector('.details');
+    details.addEventListener('click', (e) => {
+        e.preventDefault()
         fetch(`${DOC_URL}/doctors`)
             .then(response => response.json())
-            .then(doctors => { 
-
+            .then(doctors => {
+                for (let doc of doctors) {
+                    if (doc.name === e.target.textContent) {
+                        docName.innerText = doc.name;
+                        docImage.src = doc.image_url
+                        speciality.innerText = doc.speciality
+                        genders.innerText = doc.gender
+                    }
+                }
             })
     })
 
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     //wrapper event handlers
-const wrapper = document.querySelector('.wrapper');
-const loginLink = document.querySelector('.login-link');
-const registerLink = document.querySelector('.register-link');
-const btnPopup = document.querySelector('.btnLogin-popup');
-const iconClose = document.querySelector('.icon-close');
+    const wrapper = document.querySelector('.wrapper');
+    const loginLink = document.querySelector('.login-link');
+    const registerLink = document.querySelector('.register-link');
+    const btnPopup = document.querySelector('.btnLogin-popup');
+    const iconClose = document.querySelector('.icon-close');
 
 
-registerLink.addEventListener('click', () => {
-    wrapper.classList.add('active');
-});
+    registerLink.addEventListener('click', () => {
+        wrapper.classList.add('active');
+    });
 
-loginLink.addEventListener('click', () => {
-    wrapper.classList.remove('active');
-});
+    loginLink.addEventListener('click', () => {
+        wrapper.classList.remove('active');
+    });
 
-btnPopup.addEventListener('click', () => {
-wrapper.classList.add('active-popup');
-});
+    // btnPopup.addEventListener('click', () => {
+    // wrapper.classList.add('active-popup');
+    // });
 
-iconClose.addEventListener('click', () => { 
-    wrapper.classList.remove('active-popup');
-});
+    iconClose.addEventListener('click', () => {
+        wrapper.classList.remove('active-popup');
+    });
 
 
 })
