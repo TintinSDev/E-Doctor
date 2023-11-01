@@ -134,4 +134,15 @@ transition: transform .5s;
 .input-box input{
     width: 100%;
     height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.input-box .icon {
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: #162938;
+    line-height: 57px;
 }
