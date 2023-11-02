@@ -69,9 +69,12 @@ document.addEventListener('DOMContentLoaded', () => {
                  })
                  sum();
      })
+    
+    // submit event
     const feedback = document.querySelector('.feedback-btn')
     feedback.addEventListener('submit', submit => {
         submit.preventDefault();
+        
         handleSubmit();
     });
 
