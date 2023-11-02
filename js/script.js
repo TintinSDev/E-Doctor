@@ -8,7 +8,8 @@ async function fetchDocs() {
 }
 function sum() {
     appointments.textContent = Math.floor(appointments.textContent) + 1
-    document.querySelector('#appointments').value = appointments.textContent;
+    // appointments.textContent +=1
+    document.querySelector('#appointments').value = appointments.textContent
     appointments.onclick = sum;
 }
 
@@ -60,13 +61,17 @@ document.addEventListener('DOMContentLoaded', () => {
         })
      const fetchList = document.querySelector('.btn')
      fetchList.addEventListener('click', (e) => {
-         e.preventDefault()
-        //   console.log(e.target)
-         fetch(`${DOC_URL}/doctors`)
-                 .then(response => response.json())
-                 .then(doctors => {
-                     console.log(doctors)
-                 })
+         e.preventDefault();
+        //  fetch(`${DOC_URL}/doctors/${appointments.textContent}`, {
+        //     method: 'PATCH',
+        //     headers: {
+        //         'Content-Type': 'application/json'
+        //     }   
+        // })
+        //     .then(response => response.json())
+        //     .then(doctors => {
+        //         console.log(doctors)
+        //     })
                  sum();
      })
     
@@ -74,7 +79,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const feedback = document.querySelector('.feedback-btn')
     feedback.addEventListener('submit', submit => {
         submit.preventDefault();
-    
         handleSubmit();
     });
 
