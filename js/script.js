@@ -1,4 +1,4 @@
-const DOC_URL = 'http://localhost:3000'
+const DOC_URL = 'https://my-json-server.typicode.com/TintinSDev/E-Doctor'
 
 async function fetchDocs() {
 
