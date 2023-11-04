@@ -18,6 +18,16 @@ function handleSubmit() {
     console.log(feedback);
 }
 
+// like button function
+function showConfetti() {
+    confetti(
+        {
+            particleCount: 150,
+            spread: 60
+        }
+    );
+}
+
 document.addEventListener('DOMContentLoaded', () => {
 
     const docName = document.querySelector('#doc-name')
