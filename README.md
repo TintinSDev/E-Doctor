@@ -9,3 +9,4 @@ The user is able to manipulate the health app by clicking on the service they ne
 selects the type of service neede and then books an appointment by clicking on the 'book an appointment' button.
  If the user is a member a pop-up is shown of the login and on login, the user's appointment is automatically booked  and sent to the the database.
 
+Where to access https://tintinsdev.github.io/E-Doctor/
