@@ -8,7 +8,6 @@ async function fetchDocs() {
 }
 function sum() {
     appointments.textContent = Math.floor(appointments.textContent) + 1
-    // appointments.textContent +=1
     document.querySelector('#appointments').value = appointments.textContent
     appointments.onclick = sum;
 }
@@ -72,16 +71,17 @@ document.addEventListener('DOMContentLoaded', () => {
      const fetchList = document.querySelector('.btn')
      fetchList.addEventListener('click', (e) => {
          e.preventDefault();
-        //  fetch(`${DOC_URL}/doctors/${appointments.textContent}`, {
-        //     method: 'PATCH',
-        //     headers: {
-        //         'Content-Type': 'application/json'
-        //     }   
-        // })
-        //     .then(response => response.json())
-        //     .then(doctors => {
-        //         console.log(doctors)
-        //     })
+         fetch(`${DOC_URL}/doctors/${appointments.textContent}`, {
+            method: 'PATCH',
+            headers: {
+                'Content-Type': 'application/json'
+            } 
+              
+        })
+            .then(response => response.json())
+            .then(doctors => {
+                console.log(doctors)
+            })
                  sum();
      })
     
