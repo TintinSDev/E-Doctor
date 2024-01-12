@@ -31,9 +31,10 @@
  }
 
  .logo {
-     font-size: 2em;
+     font-size: 3em;
      color: #023047;
      user-select: none;
+     font-weight: 700;
      z-index: -1;
 
  }
