@@ -1,10 +1,9 @@
 const DOC_URL = 'https://my-json-server.typicode.com/TintinSDev/E-Doctor'
 
 async function fetchDocs() {
-
     const docResponse = await fetch(`${DOC_URL}/doctors`)
     const doctors = await docResponse.json()
-    return fetch(`${DOC_URL}/doctors`)
+    return doctors; // Return the parsed data instead of making another fetch call
 }
 function sum() {
     appointments.textContent = Math.floor(appointments.textContent) + 1
